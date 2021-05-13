@@ -29,14 +29,24 @@ exports.getProducts = catchErrors(async(req, res, next) => {
     })
 })
 
-exports.getSingleProduct = catchErrors(async(req,res, next) => {
-    const product = await Product.findById(req.params.id);
+// exports.getSingleProduct = catchErrors(async(req,res, next) => {
+//     const product = await Product.findById(req.params.id);
+//     res.status(200).json({
+//         success: true,
+//         // message: "getSingleProduct",
+//         product
+//     })
+// })
+
+exports.getSingleProduct = catchErrors(async (req, res, next) => {
+    const product = await Product.findById({ _id: req.params.id });
     res.status(200).json({
         success: true,
-        // message: "getSingleProduct",
+        message: "getSingleProduct",
         product
     })
 })
+
 
 exports.addProduct = catchErrors(async(req, res, next) => {
     const products = await Product.insertMany(

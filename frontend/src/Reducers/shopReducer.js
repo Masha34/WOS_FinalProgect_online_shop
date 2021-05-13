@@ -1,11 +1,28 @@
 const initialState = {
-    List: []
+    List: [],
+    // Product: [],
+    OneIdProduct: [],
+    SingleProduct: [],
+    Loader: true
+
 }
 const shopReducer = (state = initialState, action) => {
     switch (action.type) {
-        case "PRODUCTS_LOADED":  
+        case "ALL_PRODUCTS_LOADED":
             return {
-                List: action.payload
+                ...state,                
+                List: action.payload                
+            }
+        case "ID_PRODUCT_LOADED":
+            return {
+                ...state,                
+                OneIdProduct: action.payload                
+            }
+        case "ONE_PRODUCT_LOADED":            
+            return {                
+                ...state,
+                Loader: false,                
+                SingleProduct: action.payload                
             }
         default:
             return state;

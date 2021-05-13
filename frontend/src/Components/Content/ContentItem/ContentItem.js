@@ -19,22 +19,22 @@ class ContentItem extends Component {
                 <div className="col-3 poduct_info">
                     <img src={images[0].url}></img> 
                         <h2><Link to="/single-page" >{name}</Link></h2>
-                        <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i> {numOfReviews} Reviews </p>
+                        <p><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="far fa-star"></i> {numOfReviews} Reviews </p>
                         <h3>UAH {price}</h3>
-                        <p className="stock">In stock {stock} <i class="fas fa-cart-plus"></i></p>
+                        <p className="stock">In stock {stock} <i className="fas fa-cart-plus"></i></p>
                         
                         <div>
                             {/* <Link to="/editProduct" onClick={onEdit} className="table-link"> */}
                             <Link to="/" className="table">
                                 <span className="fa-stack">
-                                <i class="fas fa-edit"></i>
+                                <i className="fas fa-edit"></i>
                                 </span>
                             </Link>
                             {/* <a href="#" onClick={onDelete} className="table-link danger"> */}
                             {/* <a href="#" onClick={this.onDeleteProduct} className="table-link danger"> */}
                             <Link to="/" className="table danger">
                                 <span className="fa-stack">
-                                    <i class="fas fa-trash-alt"></i>
+                                    <i className="fas fa-trash-alt"></i>
                                 </span>
                             </Link>
                         </div>
